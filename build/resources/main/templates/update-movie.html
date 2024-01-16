@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${title}">Update Movie</title>
+</head>
+
+<body>
+<h2 th:text="${title}"></h2>
+
+<form method="post" th:action="@{update-movie}">
+    <div class="form-group">
+        <label >Movie ID:
+        <input  th:field="${movie.id}" class="form-control" required>
+        </label>
+    </div>
+
+    <div class="form-group">
+        <label >Title:</label>
+        <input th:field="${movie.title}" class="form-control" required>
+    </div>
+
+    <div class="form-group">
+        <label >Ticket Price:</label>
+        <input th:field="${movie.ticketPrice}" class="form-control" required>
+    </div>
+
+    <button type="submit">Update Movie</button>
+</form>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${title}">Create Movie</title>
+</head>
+
+<body>
+<h2 th:text="${title}" ></h2>
+
+<form method="post" th:action="@{/create-movie}">
+
+    <div class="form-group">
+        <label>Title:
+        <input  th:field="${movie.title}" class="form-control">
+        </label>
+    </div>
+
+    <div class="form-group">
+        <label >Ticket Price:
+        <input th:field="${movie.ticketPrice}" class="form-control">
+        </label>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create Movie</button>
+</form>
+</body>
+
+</html>

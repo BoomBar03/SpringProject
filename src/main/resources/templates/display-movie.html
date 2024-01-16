@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${title}">Display Movie</title>
+</head>
+
+<body>
+<h2 th:text="${title}"></h2>
+
+<div th:if="${movie}">
+    <h3>Movie Details:</h3>
+    <p><strong>ID:</strong> <span th:text="${movie.id}"></span></p>
+    <p><strong>Title:</strong> <span th:text="${movie.title}"></span></p>
+    <p><strong>Ticket Price:</strong> <span th:text="${movie.ticketPrice}"></span></p>
+</div>
+</body>
+
+</html>

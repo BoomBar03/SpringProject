@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Page</title>
+</head>
+
+<body>
+<h1>Welcome to the Employee Page</h1>
+
+<div>
+    <a th:href="@{create-movie}" class="btn btn-primary">Create Movie</a>
+    <a th:href="@{search-movie}" class="btn btn-info">Retrieve Movie</a>
+    <a th:href="@{update-movie}" class="btn btn-warning">Update Movie</a>
+    <a th:href="@{delete-movie}" class="btn btn-danger">Delete Movie</a>
+</div>
+</body>
+
+</html>
